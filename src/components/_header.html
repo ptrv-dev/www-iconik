@@ -1,5 +1,46 @@
 <header class="header">
   <div class="header__container container">
-    <h1>Header</h1>
+    <a href="/" class="header__logo logo">
+      <img src="/img/logo.svg" alt="iconik" />
+    </a>
+    <div class="header__menu">
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item_active"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Services</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">Gallery</a></li>
+          <li class="nav__item"><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+      <a class="header__btn btn" href="#">Get a consultation</a>
+      <div class="header__locale locale">
+        <div class="locale__current">
+          Eng
+          <svg
+            width="10"
+            height="7"
+            viewBox="0 0 10 7"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M5.33739 6.84961L10 2.33088L10 0.851181L5.338 5.36933L0.703125 0.849609L0.703125 2.33046L5.33739 6.84961Z"
+              fill="white"
+              fill-opacity="0.5"
+            />
+          </svg>
+        </div>
+        <ul class="locale__list">
+          <li class="locale__item">Deu</li>
+          <li class="locale__item">Ukr</li>
+        </ul>
+      </div>
+    </div>
+    <button class="header__burger">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
