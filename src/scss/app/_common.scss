@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+body {
+  font-size: $font-size;
+  color: $font-color;
+  background: $body-background;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: calc($container-width + 2 * $container-padding);
+  padding: 0 $container-padding;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+}
