@@ -46,3 +46,11 @@ $('.services__slider').slick({
   nextArrow: null,
   prevArrow: null,
 });
+
+// how to become slider
+$('.become__slider').slick({
+  dots: true,
+  prevArrow: $('#become-prev'),
+  nextArrow: $('#become-next'),
+  appendDots: $('.become-dots'),
+});
