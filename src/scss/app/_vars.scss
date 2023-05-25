@@ -1,14 +1,20 @@
 // -------- COLORS -------- //
-$black: #000000;
+$dark: #1b1b1b;
+$primary: #8a40f6;
+$gray: #2d2d2e;
+$light-gray: #615d6c;
 $white: #ffffff;
 
 // -------- INTERFACE -------- //
-$font-family: 'Roboto';
-$heading-font-family: 'Roboto';
-$font-size: 16px;
-$font-color: $black;
+$font-family: 'Manrope';
+$font-size: 13px;
+$font-color: $white;
 
-$body-background: $white;
+$heading-font-family: 'Al Veshion';
+$heading-font-weight: 400;
+$heading-text-transform: uppercase;
+
+$body-background: $dark;
 
 $container-width: 1170px;
 $container-padding: 10px;
