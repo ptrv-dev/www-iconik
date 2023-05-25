@@ -19,16 +19,6 @@ body {
   padding: 0 $container-padding;
 }
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -38,4 +28,5 @@ h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
   text-transform: $heading-text-transform;
+  margin: 0;
 }
