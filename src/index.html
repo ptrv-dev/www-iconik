@@ -8,15 +8,31 @@
     @@include('./components/_head-links.html')
   </head>
   <body>
-    <div class="wrapper">
-      @@include('./components/_header.html')
-      <main>
-        <div class="container">
-          <h1>Main</h1>
+    @@include('./components/_header.html')
+    <section class="hero" id="hero">
+      <div class="hero__container container">
+        <h1 class="hero__title">Life is short, treat yourself</h1>
+        <div class="hero__action hero-action">
+          <button class="hero-action__btn">
+            <svg
+              width="12"
+              height="14"
+              viewBox="0 0 12 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.75 7L1.125 11.9796L1.125 2.02035L9.75 7Z"
+                stroke="black"
+                stroke-width="1.5"
+              />
+            </svg>
+          </button>
+          <h5>Discover for a 30 seconds</h5>
         </div>
-      </main>
-      @@include('./components/_footer.html')
-      @@include('./components/_scripts.html')
-    </div>
+      </div>
+    </section>
+    @@include('./components/_footer.html')
+    @@include('./components/_scripts.html')
   </body>
 </html>

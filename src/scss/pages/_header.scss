@@ -1,6 +1,7 @@
 $header-height: 50px;
 .header {
   position: absolute;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,6 +13,7 @@ $header-height: 50px;
     align-items: center;
     justify-content: space-between;
   }
+  //TODO: change background
   &__menu {
     position: fixed;
     top: $header-height;
