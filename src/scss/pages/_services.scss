@@ -1,0 +1,17 @@
+.services {
+  &__container {
+  }
+  &__header {
+    margin-bottom: 30px;
+  }
+  &__dropdown {
+    margin-top: 20px;
+  }
+  &__slider {
+    margin-right: -$container-padding;
+  }
+  &__card {
+    width: 320px;
+    margin-right: 10px;
+  }
+}

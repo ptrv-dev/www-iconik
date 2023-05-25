@@ -26,3 +26,23 @@ const handleLocaleClick = () => {
 };
 
 locale.addEventListener('click', handleLocaleClick);
+
+// services dropdown
+const dropdown = document.querySelector('.services-dropdown');
+
+const handleDropdownClick = () => {
+  if (dropdown.classList.contains('services-dropdown_active')) {
+    dropdown.classList.remove('services-dropdown_active');
+  } else {
+    dropdown.classList.add('services-dropdown_active');
+  }
+};
+
+dropdown.addEventListener('click', handleDropdownClick);
+
+// services slider
+$('.services__slider').slick({
+  variableWidth: true,
+  nextArrow: null,
+  prevArrow: null,
+});
