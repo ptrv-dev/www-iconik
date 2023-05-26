@@ -9,6 +9,9 @@
 
 body {
   font-size: $font-size;
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
   color: $font-color;
   background: $body-background;
 }

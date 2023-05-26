@@ -56,7 +56,7 @@ $('.services__slider').slick({
       },
     },
     {
-      breakpoint: 1024,
+      breakpoint: 1280,
       settings: {
         variableWidth: false,
         slidesToShow: 3,
@@ -82,12 +82,30 @@ $('.services__slider').slick({
 });
 
 // how to become slider
-$('.become__slider').slick({
-  dots: true,
-  prevArrow: $('#become-prev'),
-  nextArrow: $('#become-next'),
-  appendDots: $('.become-dots'),
-});
+const becomeSliderInit = () => {
+  $('.become__slider').slick({
+    dots: true,
+    prevArrow: $('#become-prev'),
+    nextArrow: $('#become-next'),
+    appendDots: $('.become-dots'),
+    slidesToShow: 3,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+};
 
 // features tabs
 const featuresCards = document.querySelectorAll('.feature');
@@ -117,9 +135,22 @@ $('.events__slider').slick({
   arrows: false,
 });
 
+const becomeSliderUpdate = (width) => {
+  if (width >= 1440) $('.become__slider').slick('unslick');
+  else {
+    if (
+      !document
+        .querySelector('.become__slider')
+        .classList.contains('slick-initialized')
+    )
+      becomeSliderInit();
+  }
+};
+
 const handleResize = () => {
   const _w = window.innerWidth;
   console.log(_w);
+  becomeSliderUpdate(_w);
 };
 handleResize();
 
