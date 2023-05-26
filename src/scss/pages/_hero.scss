@@ -70,11 +70,16 @@
     color: #000;
 
     position: relative;
+
+    transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
     svg {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-35%, -50%);
+      path {
+        transition: stroke 0.2s ease-in-out;
+      }
     }
 
     @media screen and (min-width: $desktop) {
@@ -83,6 +88,13 @@
       svg {
         width: 24px;
         height: 24px;
+      }
+    }
+    &:hover {
+      background: none;
+      border: 2px solid $white;
+      svg path {
+        stroke: $white;
       }
     }
   }

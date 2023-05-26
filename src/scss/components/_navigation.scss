@@ -23,6 +23,7 @@
       @media screen and (min-width: $desktop) {
         padding-right: 0;
       }
+      transition: color 0.2s ease-in-out;
     }
     &::after {
       content: '';
@@ -44,6 +45,11 @@
       }
       &::after {
         background: $primary;
+      }
+    }
+    &:hover {
+      a {
+        color: lighten($primary, 10%);
       }
     }
   }
