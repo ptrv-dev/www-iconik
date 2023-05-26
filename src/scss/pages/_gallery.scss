@@ -1,0 +1,17 @@
+.gallery {
+  &__header {
+    margin-bottom: 20px;
+  }
+  &__grid {
+    display: flex;
+    gap: 10px;
+    img {
+      width: 100%;
+    }
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}
