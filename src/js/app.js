@@ -42,9 +42,43 @@ dropdown.addEventListener('click', handleDropdownClick);
 
 // services slider
 $('.services__slider').slick({
-  variableWidth: true,
-  nextArrow: null,
-  prevArrow: null,
+  variableWidth: false,
+  arrows: true,
+  slidesToShow: 5,
+  prevArrow: $('.services__prev'),
+  nextArrow: $('.services__next'),
+  responsive: [
+    {
+      breakpoint: 1440,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 4,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 3,
+        arrows: false,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        variableWidth: false,
+        slidesToShow: 2,
+        arrows: false,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        variableWidth: true,
+        arrows: false,
+      },
+    },
+  ],
 });
 
 // how to become slider
@@ -82,3 +116,11 @@ $('.events__slider').slick({
   variableWidth: true,
   arrows: false,
 });
+
+const handleResize = () => {
+  const _w = window.innerWidth;
+  console.log(_w);
+};
+handleResize();
+
+window.addEventListener('resize', handleResize);

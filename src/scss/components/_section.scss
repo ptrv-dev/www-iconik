@@ -1,5 +1,11 @@
 .section {
   margin: 50px 0;
+  @media screen and (min-width: 768px) {
+    margin: 100px 0;
+  }
+  @media screen and (min-width: $desktop) {
+    margin: 180px 0;
+  }
   &__title {
     text-align: center;
   }

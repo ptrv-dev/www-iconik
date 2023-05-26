@@ -1,11 +1,10 @@
 .hero {
-  height: 680px;
+  height: 87vh;
   background-image: url('/img/hero/hero-bg.jpg');
   background-position: center bottom;
   padding-top: $header-height;
   @media screen and (min-width: $desktop) {
     padding-top: 100px;
-    height: 87vh;
   }
   position: relative;
   &::after,
