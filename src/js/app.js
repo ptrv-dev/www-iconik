@@ -54,3 +54,25 @@ $('.become__slider').slick({
   nextArrow: $('#become-next'),
   appendDots: $('.become-dots'),
 });
+
+// features tabs
+const featuresCards = document.querySelectorAll('.feature');
+
+featuresCards.forEach((card) => {
+  const list = card.querySelector('.feature__list_secondary');
+  const more = card.querySelector('.feature__show-more');
+
+  if (!more || !list) return;
+
+  more.addEventListener('click', () => {
+    if (more.classList.contains('feature__show-more_active')) {
+      more.classList.remove('feature__show-more_active');
+      more.querySelector('p').innerHTML = 'View all features';
+      list.classList.remove('feature__list_secondary_active');
+    } else {
+      more.classList.add('feature__show-more_active');
+      more.querySelector('p').innerHTML = 'Hide all features';
+      list.classList.add('feature__list_secondary_active');
+    }
+  });
+});
