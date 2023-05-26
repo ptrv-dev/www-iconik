@@ -19,6 +19,10 @@ body {
   padding: 0 $container-padding;
 }
 
+button {
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -38,6 +42,9 @@ h6 {
 h1 {
   font-size: 30px;
   line-height: 1.33;
+  @media screen and (min-width: $desktop) {
+    font-size: 60px;
+  }
 }
 
 h2 {
@@ -54,4 +61,8 @@ h5 {
   font-size: 16px;
   line-height: 1.375;
   font-weight: 600;
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
 }

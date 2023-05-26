@@ -3,7 +3,11 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
+    @media screen and (min-width: $desktop) {
+      flex-direction: row;
+      gap: 40px;
+    }
   }
   &__item {
     position: relative;
@@ -16,6 +20,9 @@
       font-weight: 700;
       text-align: right;
       padding-right: 1.5rem;
+      @media screen and (min-width: $desktop) {
+        padding-right: 0;
+      }
     }
     &::after {
       content: '';
@@ -27,6 +34,9 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+      @media screen and (min-width: $desktop) {
+        display: none;
+      }
     }
     &_active {
       a {

@@ -7,11 +7,25 @@ $header-height: 50px;
   width: 100%;
   height: $header-height;
   border-bottom: 1px solid rgba(#fff, 0.1);
+  @media screen and (min-width: $desktop) {
+    height: 100px;
+  }
   &__container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+  &__logo {
+    img {
+      width: 150px;
+      @media screen and (min-width: $desktop) {
+        width: 185px;
+      }
+      @media screen and (min-width: $container-width) {
+        width: 220px;
+      }
+    }
   }
   //TODO: change background
   &__menu {
@@ -32,6 +46,15 @@ $header-height: 50px;
     transition: transform 0.3s ease-in-out;
     &_active {
       transform: translateX(0);
+    }
+    @media screen and (min-width: $desktop) {
+      position: static;
+      flex-direction: row;
+      background: none;
+      max-width: none;
+      transform: none;
+      width: auto;
+      align-items: center;
     }
   }
   &__burger {
@@ -69,6 +92,9 @@ $header-height: 50px;
           transform: translate(-50%) rotate(-45deg);
         }
       }
+    }
+    @media screen and (min-width: $desktop) {
+      display: none;
     }
   }
 }

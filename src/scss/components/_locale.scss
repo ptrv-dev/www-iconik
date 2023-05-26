@@ -1,6 +1,7 @@
 .locale {
   font-size: 1rem;
   position: relative;
+  cursor: pointer;
   &__current {
     display: inline-flex;
     align-items: center;

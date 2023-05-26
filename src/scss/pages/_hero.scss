@@ -3,6 +3,10 @@
   background-image: url('/img/hero/hero-bg.jpg');
   background-position: center bottom;
   padding-top: $header-height;
+  @media screen and (min-width: $desktop) {
+    padding-top: 100px;
+    height: 87vh;
+  }
   position: relative;
   &::after,
   &::before {
@@ -31,12 +35,33 @@
   }
   &__action {
     margin-top: 30px;
+    @media screen and (min-width: $desktop) {
+      margin-top: 40px;
+    }
+  }
+  &__title {
+    max-width: 620px;
+  }
+  &__volume {
+    display: none;
+    @media screen and (min-width: $desktop) {
+      border: none;
+      background: none;
+      z-index: 10;
+      display: block;
+      position: absolute;
+      right: 40px;
+      bottom: 60px;
+    }
   }
 }
 .hero-action {
   display: flex;
   align-items: center;
   gap: 13px;
+  @media screen and (min-width: $desktop) {
+    gap: 24px;
+  }
   &__btn {
     width: 50px;
     height: 50px;
@@ -51,6 +76,15 @@
       left: 50%;
       top: 50%;
       transform: translate(-35%, -50%);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 100px;
+      height: 100px;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
