@@ -6,9 +6,11 @@ const handleMenuBtnClick = () => {
   if (menuBtn.classList.contains('header__burger_active')) {
     menuBtn.classList.remove('header__burger_active');
     menuToDisplay.classList.remove('header__menu_active');
+    document.body.classList.remove('no-scroll');
   } else {
     menuBtn.classList.add('header__burger_active');
     menuToDisplay.classList.add('header__menu_active');
+    document.body.classList.add('no-scroll');
   }
 };
 
