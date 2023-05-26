@@ -136,8 +136,14 @@ $('.events__slider').slick({
 });
 
 const becomeSliderUpdate = (width) => {
-  if (width >= 1440) $('.become__slider').slick('unslick');
-  else {
+  if (width >= 1440) {
+    if (
+      document
+        .querySelector('.become__slider')
+        .classList.contains('slick-initialized')
+    )
+      $('.become__slider').slick('unslick');
+  } else {
     if (
       !document
         .querySelector('.become__slider')
@@ -147,10 +153,30 @@ const becomeSliderUpdate = (width) => {
   }
 };
 
+const screens = [...document.querySelectorAll('[data-screen]')].map((el) => [
+  el,
+  el.parentElement,
+]);
+const screensUpdate = (width) => {
+  screens.forEach(([element, parent]) => {
+    const { screen } = element.dataset;
+    const [from, to] = screen
+      .split(':')
+      .map((v) => (v === '' ? Infinity : Number(v)));
+    if (width >= from && width < to) {
+      if ([...parent.childNodes.values()].includes(element)) return;
+      parent.appendChild(element);
+    } else {
+      element.remove();
+    }
+  });
+};
+
 const handleResize = () => {
   const _w = window.innerWidth;
-  console.log(_w);
+  // console.log(_w);
   becomeSliderUpdate(_w);
+  screensUpdate(_w);
 };
 handleResize();
 

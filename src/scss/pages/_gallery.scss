@@ -1,10 +1,18 @@
 .gallery {
   &__header {
     margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 60px;
+    }
   }
   &__grid {
+    padding: 0 $container-padding;
+    width: 100%;
     display: flex;
     gap: 10px;
+    @media screen and (min-width: $desktop) {
+      gap: 20px;
+    }
     img {
       width: 100%;
     }
@@ -12,6 +20,9 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
+      @media screen and (min-width: $desktop) {
+        gap: 20px;
+      }
     }
   }
 }
