@@ -76,3 +76,9 @@ featuresCards.forEach((card) => {
     }
   });
 });
+
+// events slider
+$('.events__slider').slick({
+  variableWidth: true,
+  arrows: false,
+});
