@@ -137,7 +137,10 @@ $('.events__slider').slick({
   responsive: [
     {
       breakpoint: 1024,
-      variableWidth: true,
+      settings: {
+        variableWidth: true,
+        slidesToShow: 1,
+      },
     },
   ],
 });
