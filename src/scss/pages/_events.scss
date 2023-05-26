@@ -5,7 +5,24 @@
     gap: 24px;
     align-items: center;
   }
+  &__header {
+    margin-bottom: 24px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 60px;
+    }
+  }
   &__slider {
     width: 100%;
+    padding: 0 $container-padding;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 34px;
+    @media screen and (min-width: $desktop) {
+      margin-top: 60px;
+    }
   }
 }

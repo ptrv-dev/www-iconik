@@ -131,8 +131,15 @@ featuresCards.forEach((card) => {
 
 // events slider
 $('.events__slider').slick({
-  variableWidth: true,
+  variableWidth: false,
   arrows: false,
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      variableWidth: true,
+    },
+  ],
 });
 
 const becomeSliderUpdate = (width) => {
